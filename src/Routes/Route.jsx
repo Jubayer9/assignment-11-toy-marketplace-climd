@@ -13,16 +13,16 @@ import Login from "../Pages/Home/Login/Login";
             path:'/',
             element:<Home></Home>
         },
-        {
-            path:'/login',
-            element:<Login></Login>
-        },
-        {
-            path:'/registration',
-            element:<Registration></Registration>
-        },
-        {},
+      
       ]
     },
+    {
+      path:'/login',
+      element:<Login></Login>
+  },
+  {
+      path:'/registration',
+      element:<Registration></Registration>
+  },
   ]);
   export default router;
