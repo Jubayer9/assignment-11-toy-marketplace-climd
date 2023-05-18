@@ -23,7 +23,7 @@ function NavBar() {
             <li><Link>Blog </Link></li>
             <li tabIndex={0}>
               <Link to='' className="justify-between">
-                {user.displayName}
+                {user}
 
               </Link>
 
