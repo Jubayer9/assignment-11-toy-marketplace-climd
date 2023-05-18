@@ -1,9 +1,11 @@
+
 import Home from "../Pages/Home/Home/Home";
 
 const Main = () => {
     return (
         <div>
             <Home></Home>
+          
         </div>
     );
 };

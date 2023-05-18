@@ -2,7 +2,7 @@
 const Header = () => {
     return (
         <div>
-            <h1>This is Header</h1>
+            <img style={{width:"90%" ,margin:"0px 100px"}} src="/public/images.jpg" alt="" />
         </div>
     );
 };
