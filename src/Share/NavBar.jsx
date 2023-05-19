@@ -30,10 +30,10 @@ const handleLogOut =()=>{
           </label>
           <ul tabIndex={0} className=" menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
             <li><Link to='/'>Home</Link></li>
-            <li><Link to='/allToy'>All Toy </Link></li>
-            <li><Link to='/myToy'>My Toy </Link></li>
-            <li><Link to='/addToy'>Add Toy </Link></li>
-            <li><Link to='/blog'>Blog </Link></li>
+            <li><Link to='/allToy'>All Toy</Link></li>
+            <li><Link to='/myToy'>My Toy</Link></li>
+            <li><Link to='/addToy'>Add Toy</Link></li>
+            <li><Link to='/blog'>Blog</Link></li>
             <li tabIndex={0}>
              
 
