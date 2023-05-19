@@ -1,0 +1,11 @@
+.IMG{
+    width: 50%;
+    border-radius: 5px;
+}
+
+.train:hover{
+
+    font-weight:900 ;
+     transition: transform 1s ease-in-out ;
+     transform: translate(-1520px) ;
+ }
