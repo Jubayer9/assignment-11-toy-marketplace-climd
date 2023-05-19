@@ -11,6 +11,7 @@ const Home = () => {
             <NavBar></NavBar>
             <Header></Header>
             <PhotoGallery></PhotoGallery>
+            
             <Footer></Footer>
 
         </div>

@@ -1,0 +1,29 @@
+[
+    {
+        "Category": "Moon Knight",
+        "img1": "",
+        "img2": "",
+        "price1": "",
+        "price2": "",
+        "rating1":"" ,
+        "rating": ""
+    },
+    {
+        "Category": "Winter Soldier",
+        "img1": "",
+        "img2": "",
+        "price1": "",
+        "price2": "",
+        "rating1": "",
+        "rating2":""
+    },
+    {
+        "Category": "Ms. Marvel",
+        "img1": "",
+        "img2": "",
+        "price1": "",
+        "price2": "",
+        "rating1": "",
+        "rating2":""
+    }
+]
