@@ -1,7 +1,9 @@
 
-import { Form,} from "react-router-dom";
+import { Form, Link,} from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../../Provider/AuthProvider";
+import NavBar from "../../../Share/NavBar";
+import Footer from "../../../Share/Footer";
 const Registration = () => {
     const { createUser } = useContext(AuthContext);
 
@@ -25,27 +27,27 @@ const Registration = () => {
 
     return (
         <div>
-
+<NavBar></NavBar>
             <Form onSubmit={handleRegister}>
-            <div className="hero min-h-screen bg-base-200">
-  <div className="hero-content flex-col lg:flex-row-reverse">
+            <div className="hero min-h-screen ">
+  <div className="hero-content flex-col p">
     <div className="text-center lg:text-left">
-      <h1 className="text-5xl font-bold">Login now!</h1>
-      <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+      <h1 className="text-5xl font-bold">Register Now!!</h1>
+      
     </div>
-    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+    <div className="card  w-full max-w-sm shadow-2xl bg-base-100">
       <div className="card-body">
         <div className="form-control">
           <label className="label">
             <span className="label-text">Name</span>
           </label>
-          <input type="text" placeholder="email" name="name" className="input input-bordered" />
+          <input type="text" placeholder="Name" name="name" className="input input-bordered" />
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>
           </label>
-          <input type="email" placeholder="email" name="email" className="input input-bordered" />
+          <input type="email" placeholder="Email" name="email" className="input input-bordered" />
         </div>
         <div className="form-control">
           <label className="label">
@@ -59,6 +61,7 @@ const Registration = () => {
           </label>
           <input type="password" placeholder="password" name="password" className="input input-bordered" />
           <label className="label">
+            <p>already have an account ? <Link className="text-red-600" to='/login'>Login</Link></p>
           </label>
         </div>
         <div className="form-control mt-6">
@@ -69,6 +72,7 @@ const Registration = () => {
   </div>
 </div>
             </Form>
+            <Footer></Footer>
         </div>
     );
 };

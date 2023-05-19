@@ -1,50 +1,59 @@
 import { createContext, useEffect, useState } from "react";
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth"
+import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth"
 import app from "../Firebase/firebase.config";
 
-export const AuthContext =createContext(null)
+export const AuthContext = createContext()
 
 const auth = getAuth(app);
 
+const GoogleProvider = new GoogleAuthProvider();
 
-const AuthProvider = ({children}) => {
 
-    const [user,setUser]= useState(null)
+const AuthProvider = ({ children }) => {
+
+    const [user, setUser] = useState(null)
 
     // User create
 
-    const  createUser = (email ,password) =>{
+    const createUser = (email, password) => {
         return createUserWithEmailAndPassword(auth, email, password)
     }
     // SigIn
-    const signIn = (email,password)=>{
-        return signInWithEmailAndPassword(auth,email,password);
+    const signIn = (email, password) => {
+        return signInWithEmailAndPassword(auth, email, password);
 
     }
 
+    // Sign in with Google
+    const signInWithGoogle =()=>{
+        return signInWithPopup(auth,GoogleProvider)
+    }
+
+
     // Loge out
-    const logOut = ()=>{
+    const logOut = () => {
         return signOut(auth)
     }
 
 
     // Logged user
-    useEffect(()=>{
-        const unsubscribe = onAuthStateChanged(auth,loggedUser=>{
-            console.log('user paici',loggedUser);
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, loggedUser => {
+            console.log('user paici', loggedUser);
             setUser(loggedUser);
         })
-        return()=>{
+        return () => {
             unsubscribe();
         }
-    },[])
+    }, [])
 
 
-    const AuthInfo ={
+    const AuthInfo = {
         user,
         createUser,
         signIn,
-        logOut
+        logOut,
+        signInWithGoogle
 
     }
     return (
