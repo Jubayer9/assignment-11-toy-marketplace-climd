@@ -4,7 +4,7 @@ const PhotoGallery = () => {
     return (
         <div>
              <hr />
-            <h1 style={{fontSize:"55px",width:"20%",marginLeft:"45%"}}>Toy Gallery </h1>
+            <h1 style={{fontSize:"55px",width:"20%",marginLeft:"45%"}}>Toy Gallery</h1>
             <div style={{width:"85%",margin:"50px auto",height:"600px"}} className="carousel">
       
       <div id="slide1" className="carousel-item relative w-full">
