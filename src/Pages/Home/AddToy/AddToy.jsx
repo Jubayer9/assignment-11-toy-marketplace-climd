@@ -2,45 +2,47 @@ import React from 'react';
 import NavBar from '../../../Share/NavBar';
 import Footer from '../../../Share/Footer';
 import Swal from 'sweetalert2';
-const AddToy = (createUser) => {
+const AddToy = () => {
     const handleAddToy = event => {
         event.preventDefault();
-        const from =event.target;
+        const from = event.target;
         const category = from.category.value;
         const price = from.price.value;
         const photo = from.photo.value;
         const name = from.name.value;
 
 
-        const newToy = {category,
+        const newToy = {
+            category,
             price,
             photo,
-            name}
-console.log(newToy);
+            name
+        }
+        console.log(newToy);
 
-// send data to the server
-fetch('http://localhost:5000/addToy',{
-    method:'POST',
-    headers:{
-        'content-type': 'application/json'
-    },
-    body: JSON.stringify(newToy)
-})
-.then(res => res.json())
-.then(data =>{
+        // send data to the server
+        fetch('http://localhost:5000/addToy', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newToy)
+        })
+            .then(res => res.json())
+            .then(data => {
 
-    console.log(data);
-    if(data.insertedId){
-      
-Swal.fire({
-  title: 'Added',
-  text: ' your toy is successfully added 😀😀',
-  icon: 'success',
-  confirmButtonText: 'OK👍'
-})
+                console.log(data);
+                if (data.insertedId) {
+
+                    Swal.fire({
+                        title: 'Added',
+                        text: ' your toy is successfully added 😀😀',
+                        icon: 'success',
+                        confirmButtonText: 'OK👍'
+                    })
+                }
+            })
     }
-})}
-console.log(createUser);
     return (
         <div >
             <NavBar></NavBar>
@@ -52,25 +54,22 @@ console.log(createUser);
                 </div>
                 <div className=" grid gap-6 mb-6 md:grid-cols-2">
                     <div>
-                        <label  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Toy Name</label>
+                        <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Toy Name</label>
                         <input type="text" name="name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Name" required />
                     </div>
                     <div>
-                        <label  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Toy category</label>
+                        <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Toy category</label>
                         <input type="text" name="category" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="category" required />
                     </div>
                     <div>
-                        <label  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"> Price</label>
+                        <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"> Price</label>
                         <input type="text" name="price" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="$00.0" required />
                     </div>
                     <div>
-                        <label  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Photo URL</label>
-                        <input type="text" name="photo" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="URL"  required />
+                        <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Photo URL</label>
+                        <input type="text" name="photo" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="URL" required />
                     </div>
-                    <div>
-                        <label  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
-                        <input type="email" name="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="email"   required />
-                    </div>
+                 
 
                 </div>
                 <button className="btn btn-block">ADD TOY</button>

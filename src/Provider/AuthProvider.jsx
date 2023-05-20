@@ -11,7 +11,7 @@ const GoogleProvider = new GoogleAuthProvider();
 
 const AuthProvider = ({ children }) => {
 
-    const [user, setUser] = useState()
+    const [user, setUser] = useState(null)
 
     // User create
 

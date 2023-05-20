@@ -2,6 +2,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import './TabCard.css'
 import Rating from 'react-rating';
 import { FaRegStar, FaStar } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 const TabCard = ({ category }) => {
     const { Category1, Category2, Category3, img1, img2, img3, img4, img5, img6, name1, name2, price1, price2, rating1, rating5, rating2, rating3, rating4 } = category;
     return (
@@ -41,7 +42,9 @@ const TabCard = ({ category }) => {
 
 
                                     </div>
-                                    <button className="btn btn-primary">View Details </button>
+                                <Link to={'/details'}>
+                                <button className="btn btn-primary">View Details</button>
+                                </Link>
                                 </div>
                             </div>
                         </div>
@@ -71,7 +74,9 @@ const TabCard = ({ category }) => {
 
 
                                     </div>
-                                    <button className="btn btn-primary">View Details </button>
+                                <Link to={'/details'}>
+                                <button className="btn btn-primary">View Details</button>
+                                </Link>
                                 </div>
                             </div>
                         </div>
@@ -105,7 +110,9 @@ const TabCard = ({ category }) => {
 
 
                                     </div>
-                                    <button className="btn btn-primary">View Details </button>
+                                <Link to={'/details'}>
+                                <button className="btn btn-primary">View Details</button>
+                                </Link>
                                 </div>
                             </div>
                         </div>
@@ -135,7 +142,9 @@ const TabCard = ({ category }) => {
 
 
                                     </div>
-                                    <button className="btn btn-primary">View Details </button>
+                                <Link to={'/details'}>
+                                <button className="btn btn-primary">View Details</button>
+                                </Link>
                                 </div>
                             </div>
                         </div>
@@ -169,7 +178,9 @@ const TabCard = ({ category }) => {
 
 
                                     </div>
-                                    <button className="btn btn-primary">View Details </button>
+                                <Link to={'/details'}>
+                                <button className="btn btn-primary">View Details</button>
+                                </Link>
                                 </div>
                             </div>
                         </div>
@@ -199,7 +210,9 @@ const TabCard = ({ category }) => {
 
 
                                     </div>
-                                    <button className="btn btn-primary">View Details </button>
+                                <Link to={'/details'}>
+                                <button className="btn btn-primary">View Details</button>
+                                </Link>
                                 </div>
                             </div>
                         </div>
