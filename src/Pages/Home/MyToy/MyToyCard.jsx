@@ -18,15 +18,17 @@ const MyToyCard = ({ toy }) => {
             if (result.isConfirmed) {
 
 
-                fetch(`http://localhost:5000/addToy/${_id}`,
-                )
+                fetch(`http://localhost:5000/addToy/${_id}`, {
+                    method: 'DELETE'
+
+                })
                     .then(res => res.json())
                     .then(data => {
                         console.log(data)
                         if (data.deletedCount > 0) {
                             Swal.fire(
                                 'Deleted!',
-                                'Your file has been deleted.',
+                                'Your toy has been deleted.',
                                 'success'
                             )
 
