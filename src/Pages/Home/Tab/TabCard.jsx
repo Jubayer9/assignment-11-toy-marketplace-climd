@@ -1,5 +1,7 @@
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import './TabCard.css'
+import Rating from 'react-rating';
+import { FaRegStar, FaStar } from 'react-icons/fa';
 const TabCard = ({ category }) => {
     const { Category1, Category2, Category3, img1, img2, img3, img4, img5, img6, name1, name2, price1, price2, rating1, rating5, rating2, rating3, rating4 } = category;
     return (
@@ -21,11 +23,23 @@ const TabCard = ({ category }) => {
                                     <p>Price: ${price1}</p>
 
                                 </div>
-                                <div className="card-actions justify-end">
-                                    <div>
-                                        <span>
-                                            <p>{rating1}</p>
-                                        </span>
+                                <div className="card-actions justify-between">
+                                    <div  className='flex'>
+                                        <Rating
+                                        
+                                        
+                                        placeholderRating={rating1}
+                                        readonly
+                                        emptySymbol={<FaRegStar></FaRegStar>}
+                                        placeholderSymbol={<FaStar className='text-warning'></FaStar>}
+                                        fullSymbol={<FaStar className='text-warning'></FaStar>}
+                                        >
+                                        </Rating>
+                                          <span className='ms-3 text-red-600'>
+                                                <p>{rating1}</p>
+                                            </span>
+
+
                                     </div>
                                     <button className="btn btn-primary">View Details </button>
                                 </div>
@@ -39,11 +53,23 @@ const TabCard = ({ category }) => {
                                     <p>Price: ${price2}</p>
 
                                 </div>
-                                <div className="card-actions justify-end">
-                                    <div>
-                                        <span>
-                                            <p>{rating2}</p>
-                                        </span>
+                                <div className="card-actions justify-between">
+                                    <div  className='flex'>
+                                        <Rating
+                                        
+                                        
+                                        placeholderRating={rating2}
+                                        readonly
+                                        emptySymbol={<FaRegStar></FaRegStar>}
+                                        placeholderSymbol={<FaStar className='text-warning'></FaStar>}
+                                        fullSymbol={<FaStar className='text-warning'></FaStar>}
+                                        >
+                                        </Rating>
+                                            <span className='ms-3 text-red-600'>
+                                                <p>{rating2}</p>
+                                            </span>
+
+
                                     </div>
                                     <button className="btn btn-primary">View Details </button>
                                 </div>
@@ -61,11 +87,23 @@ const TabCard = ({ category }) => {
                                     <p>Price: ${price1}</p>
 
                                 </div>
-                                <div className="card-actions justify-end">
-                                    <div>
-                                        <span>
-                                            <p>{rating3}</p>
-                                        </span>
+                                <div className="card-actions justify-between">
+                                    <div  className='flex'>
+                                        <Rating
+                                        
+                                        
+                                            placeholderRating={rating3}
+                                            readonly
+                                            emptySymbol={<FaRegStar></FaRegStar>}
+                                            placeholderSymbol={<FaStar className='text-warning'></FaStar>}
+                                            fullSymbol={<FaStar className='text-warning'></FaStar>}
+                                            >
+                                        </Rating>
+                                            <span className='ms-3 text-red-600'>
+                                                <p>{rating3}</p>
+                                            </span>
+
+
                                     </div>
                                     <button className="btn btn-primary">View Details </button>
                                 </div>
@@ -79,11 +117,23 @@ const TabCard = ({ category }) => {
                                     <p>Price: ${price2}</p>
 
                                 </div>
-                                <div className="card-actions justify-end">
-                                    <div>
-                                        <span>
-                                            <p>{rating4}</p>
-                                        </span>
+                                <div className="card-actions justify-between">
+                                    <div  className='flex'>
+                                        <Rating
+                                        
+                                        
+                                            placeholderRating={rating4}
+                                            readonly
+                                            emptySymbol={<FaRegStar></FaRegStar>}
+                                            placeholderSymbol={<FaStar className='text-warning'></FaStar>}
+                                            fullSymbol={<FaStar className='text-warning'></FaStar>}
+                                            >
+                                        </Rating>
+                                            <span className='ms-3 text-red-600'>
+                                                <p>{rating4}</p>
+                                            </span>
+
+
                                     </div>
                                     <button className="btn btn-primary">View Details </button>
                                 </div>
@@ -101,11 +151,23 @@ const TabCard = ({ category }) => {
                                     <p>Price: ${price1}</p>
 
                                 </div>
-                                <div className="card-actions justify-end">
-                                    <div>
-                                        <span>
-                                            <p>{rating5}</p>
-                                        </span>
+                                <div className="card-actions justify-between">
+                                    <div  className='flex'>
+                                        <Rating
+                                        
+                                        
+                                            placeholderRating={rating5}
+                                            readonly
+                                            emptySymbol={<FaRegStar></FaRegStar>}
+                                            placeholderSymbol={<FaStar className='text-warning'></FaStar>}
+                                            fullSymbol={<FaStar className='text-warning'></FaStar>}
+                                            >
+                                        </Rating>
+                                            <span className='ms-3 text-red-600'>
+                                                <p>{rating5}</p>
+                                            </span>
+
+
                                     </div>
                                     <button className="btn btn-primary">View Details </button>
                                 </div>
@@ -119,11 +181,23 @@ const TabCard = ({ category }) => {
                                     <p>Price: ${price2}</p>
 
                                 </div>
-                                <div className="card-actions justify-end">
-                                    <div>
-                                        <span>
-                                            <p>{rating3}</p>
-                                        </span>
+                                <div className="card-actions justify-between">
+                                    <div  className='flex'>
+                                        <Rating
+                                        
+                                        
+                                            placeholderRating={rating3}
+                                            readonly
+                                            emptySymbol={<FaRegStar></FaRegStar>}
+                                            placeholderSymbol={<FaStar className='text-warning'></FaStar>}
+                                            fullSymbol={<FaStar className='text-warning'></FaStar>}
+                                            >
+                                        </Rating>
+                                            <span className='ms-3 text-red-600'>
+                                                <p>{rating3}</p>
+                                            </span>
+
+
                                     </div>
                                     <button className="btn btn-primary">View Details </button>
                                 </div>
