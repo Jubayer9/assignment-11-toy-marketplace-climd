@@ -12,7 +12,7 @@ const Registration = () => {
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-        const name = form.first_name.value;
+        const name = form.name.value;
         const photo = form.photo.value;
         console.log(name, email, password, photo);
         createUser(email, password)

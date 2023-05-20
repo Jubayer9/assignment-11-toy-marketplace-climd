@@ -41,7 +41,7 @@ const handleLogOut =()=>{
           </ul>
         </div>
         <Link to='/'  className="btn gap-7 btn-ghost normal-case text-xl"><img style={{width:"50px",borderRadius:"50px"}} src="/public/shopping-bag-superhero-online-shop-bag-shop-super-hero-fashion-web-store_358185-126.jpg" alt="" />
-        <h1 style={{height:"40px",marginTop:"1%",color:"#FF6969" }}>🦸 Here <span style={{color:"#FF6036"}}> Bag 👊</span> </h1>
+        <h1 style={{height:"40px",marginTop:"1%",color:"#FF6969" }}>🦸 Hero <span style={{color:"#FF6036"}}> Bag 👊</span> </h1>
         </Link>
       </div>
       
