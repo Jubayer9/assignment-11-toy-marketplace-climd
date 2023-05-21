@@ -3,8 +3,30 @@ import './TabCard.css'
 import Rating from 'react-rating';
 import { FaRegStar, FaStar } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
+import Login from '../Login/Login';
 const TabCard = ({ category }) => {
     const { Category1, Category2, Category3, img1, img2, img3, img4, img5, img6, name1, name2, price1, price2, rating1, rating5, rating2, rating3, rating4 } = category;
+    const handelSweet =()=>{
+        Swal.fire({
+  title: 'Are you login ?',
+  showDenyButton: true,
+  showCancelButton: true,
+  icon: 'question',
+  confirmButtonText: 'Yes',
+  denyButtonText: `No`,
+}).then((result) => {
+  /* Read more about isConfirmed, isDenied below */
+  if (result.isConfirmed) {
+    Swal.fire('Welcome', '', 'success')
+  }
+   else if (result.isDenied) {
+    Swal.fire(' Please login!!!','', 'info')
+  }
+})
+
+
+    }
     return (
         <div>
 
@@ -44,7 +66,7 @@ const TabCard = ({ category }) => {
 
                                     </div>
                                 <Link to={'/details'}>
-                                <button className="btn btn-primary">View Details</button>
+                                <button onClick={handelSweet} className="btn btn-primary">View Details</button>
                                 </Link>
                                 </div>
                             </div>

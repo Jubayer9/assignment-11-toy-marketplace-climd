@@ -1,10 +1,13 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
-const MyToyCard = ({ toy,Toys,setToys }) => {
+const MyToyCard = ({ toy,Toys,setToys}) => {
 
-    const { _id, category, price, photo, name, } = toy
+
+    
+    
+
+    const { _id, category, price, photo, name,user, } = toy
     const handleDelete = _id => {
         console.log(_id);
         Swal.fire({
@@ -19,7 +22,7 @@ const MyToyCard = ({ toy,Toys,setToys }) => {
             if (result.isConfirmed) {
 
 
-                fetch(`http://localhost:5000/addToy/${_id}`, {
+                fetch(`https://toy-marketplace-server-beige.vercel.app/addToy/${_id}`, {
                     method: 'DELETE'
 
                 })
@@ -41,8 +44,9 @@ const MyToyCard = ({ toy,Toys,setToys }) => {
         })
     }
     return (
+<>
 
-        <div className="overflow-x-auto w-full">
+<div className="overflow-x-auto w-full">
             <table className="table w-full">
                 {/* head */}
                 <thead>
@@ -52,7 +56,7 @@ const MyToyCard = ({ toy,Toys,setToys }) => {
                             </label>
                         </th>
                         <th>img + available-Quantity</th>
-                        <th> Product Code </th>
+                        <th> Product Code + user </th>
                         <th>Price</th>
                         <th></th>
                     </tr>
@@ -76,13 +80,13 @@ const MyToyCard = ({ toy,Toys,setToys }) => {
                                     </div>
                                 </div>
                                 <div>
-                                    <div className="font-bold">{name}</div>
+                                    <div className="font-bold"> Quantity : {name}</div>
                                     <div className="text-sm opacity-50">Sub-category: {category}</div>
                                 </div>
                             </div>
                         </td>
                         <td>
-                            {_id}
+                            {user}
                             <br />
                             <span className="badge badge-ghost badge-sm"># {_id} </span>
                         </td>
@@ -98,6 +102,9 @@ const MyToyCard = ({ toy,Toys,setToys }) => {
 
             </table>
         </div>
+           
+
+</>
     );
 };
 

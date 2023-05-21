@@ -12,25 +12,29 @@ const GoogleProvider = new GoogleAuthProvider();
 const AuthProvider = ({ children }) => {
 
     const [user, setUser] = useState(null)
-
+    const [loading ,setLoading] = useState(true);
     // User create
 
     const createUser = (email, password) => {
+        setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
     }
     // SigIn
     const signIn = (email, password) => {
+        setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
     }
 
     // Sign in with Google
     const signInWithGoogle =()=>{
+        setLoading(true)
         return signInWithPopup(auth,GoogleProvider)
     }
 
 
     // Loge out
     const logOut = () => {
+        setLoading(true);
         return signOut(auth)
     }
 
@@ -40,6 +44,7 @@ const AuthProvider = ({ children }) => {
         const unsubscribe = onAuthStateChanged(auth, loggedUser => {
             console.log('user paici', loggedUser);
             setUser(loggedUser);
+            setLoading(false)
         })
         return () => {
             unsubscribe();
@@ -49,6 +54,7 @@ const AuthProvider = ({ children }) => {
 
     const AuthInfo = {
         user,
+        loading,
         createUser,
         signIn,
         logOut,

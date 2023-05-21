@@ -7,7 +7,7 @@ import TabCard from './TabCard';
 const TabBar = () => {
   const [categories, SetCategories] = useState([]);
   useEffect(() => {
-fetch('http://localhost:5000/category')
+fetch('https://toy-marketplace-server-beige.vercel.app/category')
 .then(res=>res.json())
 .then(data=>SetCategories(data));
   }, [])
