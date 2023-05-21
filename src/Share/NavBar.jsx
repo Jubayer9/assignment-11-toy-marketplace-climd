@@ -48,7 +48,7 @@ const handleLogOut =()=>{
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li><Link to='/'>Home</Link></li>
-          <li><Link to='/myToy'>All toy </Link></li>
+          <li><Link to='/myToy'>All Toy </Link></li>
          { user &&
            <li><Link to='/myToy'>My Toy </Link></li>
           }
