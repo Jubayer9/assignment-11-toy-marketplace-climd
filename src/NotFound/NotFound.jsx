@@ -1,4 +1,4 @@
-import React from 'react';
+import img from '../../src/photo/marvel-404-page.jpg'
 import { Link } from 'react-router-dom';
 
 const NotFound = () => {
@@ -10,7 +10,7 @@ const NotFound = () => {
 </button></Link>
            <div className='bg-white '
         style={{height:"790px"}}>
-            <img  className='w-100 bg-white h-full' src="/public/marvel-404-page.jpg" alt="" />
+            <img  className='w-100 bg-white h-full' src={img} />
         </div>
      </div>
     );
