@@ -4,7 +4,9 @@ import { useContext } from "react";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import NavBar from "../../../Share/NavBar";
 import Footer from "../../../Share/Footer";
+import useTitle from "../../../Hook/UseTitle";
 const Registration = () => {
+  useTitle('Register')
     const { createUser } = useContext(AuthContext);
 
     const handleRegister = event => {

@@ -4,6 +4,7 @@ import { AuthContext } from "../../../Provider/AuthProvider";
 import NavBar from "../../../Share/NavBar";
 import Footer from "../../../Share/Footer";
 import { FcGoogle } from "react-icons/fc";
+import useTitle from "../../../Hook/UseTitle";
 
 const Login = () => {
 
@@ -12,6 +13,8 @@ const Login = () => {
   const location = useLocation()
   console.log('login page location', location);
   const from = location.state?.from?.pathname || '/'
+
+useTitle('login')
 
   const handleLogin = event => {
     event.preventDefault();

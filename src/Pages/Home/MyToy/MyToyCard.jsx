@@ -51,7 +51,7 @@ const MyToyCard = ({ toy,Toys,setToys }) => {
                             <label>
                             </label>
                         </th>
-                        <th>img + Name</th>
+                        <th>img + available-Quantity</th>
                         <th> Product Code </th>
                         <th>Price</th>
                         <th></th>
@@ -77,16 +77,16 @@ const MyToyCard = ({ toy,Toys,setToys }) => {
                                 </div>
                                 <div>
                                     <div className="font-bold">{name}</div>
-                                    <div className="text-sm opacity-50">{category}</div>
+                                    <div className="text-sm opacity-50">Sub-category: {category}</div>
                                 </div>
                             </div>
                         </td>
                         <td>
                             {_id}
                             <br />
-                            <span className="badge badge-ghost badge-sm"> {_id} </span>
+                            <span className="badge badge-ghost badge-sm"># {_id} </span>
                         </td>
-                        <td>{price}</td>
+                        <td>${price}</td>
                         <th>
                             <Link to={`/${_id}`}>
                                 <button className="btn btn-ghost btn-xs">Update</button>

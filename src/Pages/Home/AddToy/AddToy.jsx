@@ -2,7 +2,9 @@ import React from 'react';
 import NavBar from '../../../Share/NavBar';
 import Footer from '../../../Share/Footer';
 import Swal from 'sweetalert2';
+import useTitle from '../../../Hook/UseTitle';
 const AddToy = () => {
+    useTitle('add toy')
     const handleAddToy = event => {
         event.preventDefault();
         const from = event.target;
@@ -53,18 +55,22 @@ const AddToy = () => {
                     <p> Now add your favorite toy and Go play superheros !!! </p>
                 </div>
                 <div className=" grid gap-6 mb-6 md:grid-cols-2">
+                    {/* available Quantity Part */}
                     <div>
-                        <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Toy Name</label>
-                        <input type="text" name="name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Name" required />
+                        <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">available Quantity</label>
+                        <input type="text" name="name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="piece" required />
                     </div>
+                    {/* Toy category Part*/}
                     <div>
                         <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Toy category</label>
                         <input type="text" name="category" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="category" required />
                     </div>
+                    {/* price Part */}
                     <div>
                         <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"> Price</label>
                         <input type="text" name="price" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="$00.0" required />
                     </div>
+                    {/* photo add part */}
                     <div>
                         <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Photo URL</label>
                         <input type="text" name="photo" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="URL" required />

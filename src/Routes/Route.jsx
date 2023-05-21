@@ -4,7 +4,7 @@ import Home from "../Pages/Home/Home/Home";
 import Registration from "../Pages/Home/Registration/Registration";
 import Login from "../Pages/Home/Login/Login";
 import Blog from "../Pages/Blog/Blog";
-import AllToy from "../Pages/Home/AllToy/allToy";
+import AllToy from "../Pages/Home/AllToy/AllToy";
 import AddToy from "../Pages/Home/AddToy/AddToy";
 import MyToy from "../Pages/Home/MyToy/myToy";
 import NotFound from "../NotFound/NotFound";
@@ -52,10 +52,6 @@ const router = createBrowserRouter([
     element: <AddToy></AddToy>
   },
   {
-    path: '*',
-    element: <NotFound></NotFound>
-  },
-  {
     path:'/:id',
     element: <UpdateToy></UpdateToy>,
     loader: ({params})=> fetch(`http://localhost:5000/addToy/${params.id}`)
@@ -63,7 +59,11 @@ const router = createBrowserRouter([
   {
     path:'/details',
     element:<PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>
-  }
-
+  },
+  
+  {
+    path: '*',
+    element: <NotFound></NotFound>
+  },
 ]);
 export default router;

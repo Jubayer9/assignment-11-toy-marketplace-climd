@@ -24,6 +24,7 @@ const TabCard = ({ category }) => {
                                     <p>Price: ${price1}</p>
 
                                 </div>
+                                 {/* Rating Part */}
                                 <div className="card-actions justify-between">
                                     <div  className='flex'>
                                         <Rating
@@ -56,6 +57,7 @@ const TabCard = ({ category }) => {
                                     <p>Price: ${price2}</p>
 
                                 </div>
+                                 {/* Rating Part */}
                                 <div className="card-actions justify-between">
                                     <div  className='flex'>
                                         <Rating
@@ -92,6 +94,7 @@ const TabCard = ({ category }) => {
                                     <p>Price: ${price1}</p>
 
                                 </div>
+                                 {/* Rating Part */}
                                 <div className="card-actions justify-between">
                                     <div  className='flex'>
                                         <Rating
@@ -124,6 +127,7 @@ const TabCard = ({ category }) => {
                                     <p>Price: ${price2}</p>
 
                                 </div>
+                                 {/* Rating Part */}
                                 <div className="card-actions justify-between">
                                     <div  className='flex'>
                                         <Rating
@@ -160,6 +164,7 @@ const TabCard = ({ category }) => {
                                     <p>Price: ${price1}</p>
 
                                 </div>
+                                 {/* Rating Part */}
                                 <div className="card-actions justify-between">
                                     <div  className='flex'>
                                         <Rating
@@ -192,6 +197,7 @@ const TabCard = ({ category }) => {
                                     <p>Price: ${price2}</p>
 
                                 </div>
+                                 {/* Rating Part */}
                                 <div className="card-actions justify-between">
                                     <div  className='flex'>
                                         <Rating
